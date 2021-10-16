@@ -39,7 +39,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          push: false
+          load: true
           tags: prebuild
 
       - name: Read version
