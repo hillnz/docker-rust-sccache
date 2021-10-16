@@ -45,7 +45,7 @@ jobs:
       - name: Read version
         id: read_version
         run: |
-          echo "::set-output name=VERSION::$(docker run prebuild sccache --version | sed 's/sccache //')"
+          echo "::set-output name=VERSION::$(docker run prebuild rustc --version | grep -P -o '\d+\.\d+\.\d+')"
 
       - name: Build and push
         id: docker_build_push
