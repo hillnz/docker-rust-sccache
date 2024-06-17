@@ -8,6 +8,6 @@ ARG SCCACHE_VERSION=v0.8.1
 COPY download-sccache.sh ./
 RUN ./download-sccache.sh
 
-FROM rust:1.78.0
+FROM rust:1.79.0
 
 COPY --from=downloader /tmp/sccache/sccache /usr/local/bin/sccache
