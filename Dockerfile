@@ -3,7 +3,7 @@ FROM curlimages/curl AS downloader
 ARG TARGETPLATFORM
 
 # renovate: datasource=github-releases depName=mozilla/sccache
-ARG SCCACHE_VERSION=v0.8.2
+ARG SCCACHE_VERSION=v0.9.0
 
 COPY download-sccache.sh ./
 RUN ./download-sccache.sh
